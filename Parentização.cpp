@@ -7,7 +7,7 @@ typedef struct no* Arv;
 struct no{ char c; Arv le,ld;};
 Arv T;  int n, toti;
 
-void ImprimeParentisada(Arv p){
+void ImprimeParentizada(Arv p){
 	if ((p->ld == NULL) && (p->le == NULL))
 	{
 		printf("%d", p->c);
@@ -15,9 +15,9 @@ void ImprimeParentisada(Arv p){
 	else
 	{
 		cout<<('(');
-		ImprimeParentisada(p->le);
+		ImprimeParentizada(p->le);
 		cout<<p->c;
-		ImprimeParentisada(p->ld);
+		ImprimeParentizada(p->ld);
 		cout<<(')');
 	}
 }
@@ -47,7 +47,7 @@ int main(){
     	cout<<endl<<" n= ";  cin>>n;
         toti = 0;
         T = CriaExpr('I');
-        ImprimeParentisada(T);
+        ImprimeParentizada(T);
     }
     return 0;
 }
