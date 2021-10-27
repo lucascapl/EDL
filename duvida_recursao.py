@@ -13,7 +13,7 @@ def my_filter(func,lista):
             my_filter(func, lista[1:])
     return new_list
 
-def is_even(item):
+def regra(item):
     if item>6 :
         return True
     else:
@@ -22,4 +22,4 @@ def is_even(item):
     
 
 seq=[1,2,3,4,5,6,7,8,9,10]
-print(my_filter(is_even,seq))
+print(my_filter(regra,seq))
